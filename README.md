@@ -1,6 +1,6 @@
 # Piggy Little
 
-<img src="sprites/Piggy_front/13806fea-4c1b-4f45-9254-f94f6fa99f77.png" alt="Piggy" width="80"/>
+<img src="sprites/Piggy_front/13806fea-4c1b-4f45-9254-f94f6fa99f77.png" alt="Piggy"/>
 
 A story-driven top-down adventure about a little pig on a mission to rescue his family from the big bad wolves.
 
