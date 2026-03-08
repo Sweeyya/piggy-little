@@ -1,0 +1,63 @@
+<svg width="800" height="140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#6B1A1A"/>
+      <stop offset="50%"  stop-color="#4A2010"/>
+      <stop offset="100%" stop-color="#6B1A1A"/>
+    </linearGradient>
+    <style>
+      .flake { fill: #ffffff; opacity: 0.75; }
+      .f1  { animation: drop 4.2s linear infinite 0.0s; }
+      .f2  { animation: drop 5.8s linear infinite 0.6s; }
+      .f3  { animation: drop 3.9s linear infinite 1.2s; }
+      .f4  { animation: drop 6.1s linear infinite 0.3s; }
+      .f5  { animation: drop 4.7s linear infinite 1.8s; }
+      .f6  { animation: drop 5.2s linear infinite 0.9s; }
+      .f7  { animation: drop 3.6s linear infinite 2.1s; }
+      .f8  { animation: drop 6.4s linear infinite 0.5s; }
+      .f9  { animation: drop 4.0s linear infinite 1.5s; }
+      .f10 { animation: drop 5.5s linear infinite 2.4s; }
+      .f11 { animation: drop 3.8s linear infinite 0.2s; }
+      .f12 { animation: drop 6.0s linear infinite 1.0s; }
+      @keyframes drop {
+        0%   { transform: translateY(-12px); opacity: 0; }
+        10%  { opacity: 0.75; }
+        90%  { opacity: 0.75; }
+        100% { transform: translateY(152px); opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="140" fill="url(#bg)" rx="10"/>
+
+  <!-- warm glow behind text -->
+  <ellipse cx="400" cy="78" rx="260" ry="52" fill="#8B3010" opacity="0.28"/>
+
+  <!-- title -->
+  <text x="400" y="72"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="50" font-weight="bold"
+        fill="#F5F0E8" text-anchor="middle"
+        letter-spacing="3">piggy little</text>
+
+  <!-- subtitle -->
+  <text x="400" y="108"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="16" fill="#D4896A"
+        text-anchor="middle" letter-spacing="5">❄  a snowy adventure  ❄</text>
+
+  <!-- snowflakes at different x positions -->
+  <circle class="flake f1"  cx="32"  cy="0" r="2.8"/>
+  <circle class="flake f2"  cx="90"  cy="0" r="2.0"/>
+  <circle class="flake f3"  cx="155" cy="0" r="2.4"/>
+  <circle class="flake f4"  cx="220" cy="0" r="1.8"/>
+  <circle class="flake f5"  cx="290" cy="0" r="2.6"/>
+  <circle class="flake f6"  cx="365" cy="0" r="2.0"/>
+  <circle class="flake f7"  cx="430" cy="0" r="3.0"/>
+  <circle class="flake f8"  cx="500" cy="0" r="1.8"/>
+  <circle class="flake f9"  cx="568" cy="0" r="2.4"/>
+  <circle class="flake f10" cx="635" cy="0" r="2.0"/>
+  <circle class="flake f11" cx="700" cy="0" r="2.8"/>
+  <circle class="flake f12" cx="762" cy="0" r="1.8"/>
+</svg>
