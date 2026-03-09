@@ -6,8 +6,8 @@
   "name":"obj_solid",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"invis_obj",
+    "path":"folders/invis_obj.yy",
   },
   "parentObjectId":null,
   "persistent":false,

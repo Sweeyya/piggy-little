@@ -10,6 +10,10 @@ sprite[DOWN] = Piggy_front;
 
 face = DOWN;
 
+
+
+inventory = [];
+
 dash_timer = 0;
 dash_key = -1;
 dashing = false;
