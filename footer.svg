@@ -1,0 +1,35 @@
+<svg width="800" height="70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#6B1A1A"/>
+      <stop offset="50%"  stop-color="#4A2010"/>
+      <stop offset="100%" stop-color="#6B1A1A"/>
+    </linearGradient>
+    <style>
+      .fk { fill: #ffffff; opacity: 0.7; }
+      .a1 { animation: fall 4.5s linear infinite 0.0s; }
+      .a2 { animation: fall 5.5s linear infinite 1.0s; }
+      .a3 { animation: fall 3.8s linear infinite 0.5s; }
+      .a4 { animation: fall 6.0s linear infinite 1.5s; }
+      .a5 { animation: fall 4.2s linear infinite 2.0s; }
+      .a6 { animation: fall 5.0s linear infinite 0.8s; }
+      @keyframes fall {
+        0%   { transform: translateY(-8px);  opacity: 0; }
+        10%  { opacity: 0.7; }
+        90%  { opacity: 0.7; }
+        100% { transform: translateY(78px); opacity: 0; }
+      }
+    </style>
+  </defs>
+  <rect width="800" height="70" fill="url(#fg)" rx="10"/>
+  <text x="400" y="42"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="16" fill="#F5F0E8"
+        text-anchor="middle" letter-spacing="4">made with love by sweeya  ❄</text>
+  <circle class="fk a1" cx="60"  cy="0" r="2.2"/>
+  <circle class="fk a2" cx="180" cy="0" r="1.8"/>
+  <circle class="fk a3" cx="320" cy="0" r="2.4"/>
+  <circle class="fk a4" cx="480" cy="0" r="1.8"/>
+  <circle class="fk a5" cx="620" cy="0" r="2.2"/>
+  <circle class="fk a6" cx="740" cy="0" r="2.0"/>
+</svg>
