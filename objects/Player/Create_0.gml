@@ -32,3 +32,5 @@ take_damage = function(amount) {
 }
 
 interactable = noone;
+
+persistent = true;

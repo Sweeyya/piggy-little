@@ -43,8 +43,9 @@ else
 sprite_index = sprite[face];
 
 // COLLISIONS
-if place_meeting(x + xspd, y, bed_obj) xspd = 0;
-if place_meeting(x, y + yspd, bed_obj) yspd = 0;
+if place_meeting(x + xspd, y, obj_solid) xspd = 0;
+if place_meeting(x, y + yspd, obj_solid) yspd = 0;
+
 depth = -y;
 
 // MOVE
@@ -83,7 +84,7 @@ if invincible > 0 invincible--;
 
 // flash red when hit
 if invincible > 0 && invincible mod 20 < 10 {
-    image_blend = merge_color(c_white, c_red, 0.2);
+    image_blend = merge_color(c_white, c_red, 0.3);
 } else {
     image_blend = c_white;
 }
@@ -123,14 +124,61 @@ if (keyboard_check_pressed(vk_down)) {
 if dash_timer > 0 dash_timer--;
 else dash_key = -1;
 
-// check for nearby interactable in the direction Piggy is facing
-//var ix = x + (face == RIGHT ? 16 : face == LEFT ? -16 : 0);
-//var iy = y + (face == DOWN ? 16 : face == UP ? -16 : 0);
+//freeze during dialogue
+if instance_exists(dialogue_obj) && dialogue_obj.active {
+    exit;
+}
 
-//interactable = instance_place(ix, iy, all);
+var ix = x;
+var iy = y;
+if face == RIGHT ix = x + 16;
+else if face == LEFT ix = x - 16;
+if face == DOWN iy = y + 16;
+else if face == UP iy = y - 16;
+interactable = instance_nearest(x, y, snowman_char);
+var door_nearest = instance_nearest(x, y, door_obj);
 
-//if (keyboard_check_pressed(ord("E"))) {
-//    if instance_exists(interactable) && variable_instance_exists(interactable, "interactable_obj") {
-//        with (interactable) interact();
-//    }
-//}
+
+interactable = noone;
+var nearest_dist = 100;
+
+var snow = instance_nearest(x, y, snowman_char);
+if instance_exists(snow) {
+    var d = point_distance(x, y, snow.x, snow.y);
+    if d < nearest_dist {
+        nearest_dist = d;
+        interactable = snow;
+    }
+}
+
+var nearest_door = instance_nearest(x, y, door_obj);
+if instance_exists(nearest_door) {
+    var d = point_distance(x, y, nearest_door.x, nearest_door.y);
+    if d < nearest_dist {
+        nearest_dist = d;
+        interactable = nearest_door;
+    }
+}
+
+if (keyboard_check_pressed(ord("E"))) {
+    if instance_exists(interactable) {
+        if variable_instance_exists(interactable, "interactable_obj") {
+            with (interactable) interact();
+        }
+    }
+}
+
+if (keyboard_check_pressed(ord("E"))) {
+    var door_nearest = instance_nearest(x, y, door_obj);
+    show_debug_message("door distance: " + string(point_distance(x, y, door_nearest.x, door_nearest.y)));
+    show_debug_message("interactable: " + string(interactable));
+}
+
+if (keyboard_check_pressed(ord("E"))) {
+    show_debug_message("E pressed");
+    show_debug_message("interactable: " + string(interactable));
+    if instance_exists(interactable) {
+        show_debug_message("instance exists");
+        show_debug_message("has var: " + string(variable_instance_exists(interactable, "interactable_obj")));
+    }
+}

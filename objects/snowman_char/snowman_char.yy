@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"bed_obj",
+  "%Name":"snowman_char",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"bed_obj",
+  "name":"snowman_char",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"characters",
+    "path":"folders/characters.yy",
   },
-  "parentObjectId":{
-    "name":"obj_solid",
-    "path":"objects/obj_solid/obj_solid.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"bed",
-    "path":"sprites/bed/bed.yy",
+    "name":"snowman",
+    "path":"sprites/snowman/snowman.yy",
   },
   "spriteMaskId":null,
   "visible":true,

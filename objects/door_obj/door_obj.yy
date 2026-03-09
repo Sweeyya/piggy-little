@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"bed_obj",
+  "%Name":"door_obj",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"bed_obj",
+  "name":"door_obj",
   "overriddenProperties":[],
   "parent":{
     "name":"objects",
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"bed",
-    "path":"sprites/bed/bed.yy",
+    "name":"door",
+    "path":"sprites/door/door.yy",
   },
   "spriteMaskId":null,
   "visible":true,

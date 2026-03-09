@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"bed_obj",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"side_table",
+  "eventList":[],
   "managed":true,
-  "name":"bed_obj",
+  "name":"side_table",
   "overriddenProperties":[],
   "parent":{
     "name":"objects",
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"bed",
-    "path":"sprites/bed/bed.yy",
+    "name":"side_table_spr",
+    "path":"sprites/side_table_spr/side_table_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,
